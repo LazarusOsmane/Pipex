@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: engooh <erickngooh@gmail.com>              +#+  +:+       +#+        */
+/*   By: engooh <engooh@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 15:40:57 by engooh            #+#    #+#             */
-/*   Updated: 2022/05/06 18:52:20 by engooh           ###   ########.fr       */
+/*   Updated: 2022/05/08 11:21:06 by engooh           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	child_process(t_pipe *p, char *cmd, int flag, int i)
 	if (!p->pid[i])
 	{
 		if (flag == FIRST_CMD)
-			redir(p, p->infile, p->fd[1]);	
+			redir(p, p->infile, p->fd[1]);
 		if (flag == MIDLLE_CMD)
 			redir(p, p->prev, p->fd[1]);
 		if (flag == LAST_CMD)
